@@ -69,30 +69,21 @@ document.getElementById('deposit-button').addEventListener('click',function(){
 });
 
 document.getElementById('withdraw-button').addEventListener('click',function(){
+   
     const inputAmount= GetInputValue('withdraw-input');
-    if(inputAmount>0 ){
-        const totalAmount=getUpdateTotal('withdraw-total');
-        if(inputAmount>totalAmount){
-            errorMessage('withdraw-error-message');
-
-        }
-        else{
+    const totalAmount=getUpdateTotal('withdraw-total');
+    if(inputAmount>0){
+        
         const totalwithdrawMoney=inputAmount+totalAmount;
         const total=document.getElementById('withdraw-total');
         total.innerText=totalwithdrawMoney;
         const bal=GetUpdateBalance(inputAmount,false);
        
     }
-    }
+    
     else {
         errorMessage('withdraw-error-message');
       
-        }
-
-        
-      
-
-    
-   
+        } 
 
 })

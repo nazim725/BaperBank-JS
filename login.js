@@ -7,7 +7,9 @@ document.getElementById('login-button').addEventListener('click',function(){
     else{
         const errorMessage=document.getElementById('error-message');
         errorMessage.innerText="Sorry, Input Your Valid User Name and Password!!!!";
-        errorMessage.style.backgroundColor='DarkSeaGreen';
+        errorMessage.style.backgroundColor='red';
         errorMessage.style.padding='20px';
+        errorMessage.style.borderRadius='20px';
+        
     }
 });

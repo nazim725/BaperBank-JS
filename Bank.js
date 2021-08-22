@@ -34,13 +34,22 @@ function GetUpdateBalance(inputAmount,isAdd){
     }
     if(isAdd==false)
     {
-        if(inputAmount<balanceValue){
+        if(inputAmount<=balanceValue){
             const Total= balanceValue-inputAmount;
             balance.innerText=Total;
         }
         else{
             
-            errorMessage('withdraw-error-message');
+            // errorMessage('withdraw-error-message');
+            const errorMessage=document.getElementById('withdraw-error-message');
+            errorMessage.innerText=" You have Insufficient Balance";
+            errorMessage.style.backgroundColor='Navy';
+            errorMessage.style.padding='20px';
+            errorMessage.style.marginTop='20px';
+            errorMessage.style.textAlign='center';
+            errorMessage.style.color='white';
+            errorMessage.style.fontSize='20px';
+            errorMessage.style.borderRadius='20px';
         }
         
     }
